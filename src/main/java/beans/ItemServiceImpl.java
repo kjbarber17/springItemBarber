@@ -11,25 +11,25 @@ public class ItemServiceImpl implements ItemService {
 		this.itemDao = itemDao;
 	}
 
-	public void changePrice(long sourceItemId, long targetItemId, double price) {
+	public void changePrice(long sourceItemId, double discount) {
 		Item sourceItem = itemDao.find(sourceItemId);
-		Item targetItem = itemDao.find(targetItemId);
+		
 		System.out.println("testing");
 
-		sourceItem.setPrice(sourceItem.getDiscount() + price);
-		targetItem.setPrice(targetItem.getDiscount() + price);
+		sourceItem.setSalePrice(sourceItem.getPrice() - discount);
+		
 
 		itemDao.update(sourceItem);
-		itemDao.update(targetItem);
+		
 
 	}
 
-	public void changePrice(long itemId, double price) {
+	/*public void changePrice(long itemId, double price) {
 		Item item = itemDao.find(itemId);
 		item.setPrice(item.getDiscount() + price);
 		itemDao.update(item);
 
-	}
+	}*/
 	public ItemServiceImpl() {
 		super();
 		// TODO Auto-generated constructor stub

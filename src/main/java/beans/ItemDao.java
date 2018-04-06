@@ -10,7 +10,7 @@ public interface ItemDao {
 	public Item find(long itemId);
 	public List<Item>find(List<Long>itemIds);
 	public List<Item>find(String itemName);
-	public List<Item>find(double price);
+	
 
 } 
 

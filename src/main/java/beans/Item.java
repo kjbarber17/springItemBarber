@@ -5,17 +5,17 @@ public class Item {
 	private long id;
 	private String itemName;
 	private double price;
-	//private double salePrice;
-	private double discount;
+	private double salePrice;
+	//private double discount;
 	
 	
-	public Item(long id, String itemName, double price, double discount/*, double salePrice*/) {
+	public Item(long id, String itemName, double price, double salePrice) {
 		super();
 		this.id = id;
 		this.itemName = itemName;
 		this.price = price;
-		//this.salePrice = salePrice;
-		this.discount = discount;
+		this.salePrice = salePrice;
+		//this.discount = discount;
 	}
 	
 	public long getId() {
@@ -36,17 +36,17 @@ public class Item {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	/*public double getSalePrice() {
+	public double getSalePrice() {
 		return salePrice;
 	}
 	public void setSalePrice(double salePrice) {
 		this.salePrice = salePrice;
-	}*/
+	/*}
 	public double getDiscount() {
 		return discount;
 	}
 	public void setDiscount(double discount) {
-		this.discount = discount;
+		this.discount = discount;*/
 	
 	}
 }

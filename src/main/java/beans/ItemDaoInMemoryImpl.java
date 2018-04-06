@@ -60,7 +60,7 @@ public class ItemDaoInMemoryImpl implements ItemDao {
 			}
 		}
 		return items;
-	}
+	/*}
 
 	public List<Item> find(double discount) {
 		List<Item>items = new ArrayList<Item>();
@@ -69,7 +69,7 @@ public class ItemDaoInMemoryImpl implements ItemDao {
 				items.add(item);
 			}
 		}
-		return items;
+		return items;*/
 	}
 
 }
