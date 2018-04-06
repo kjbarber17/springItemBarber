@@ -22,8 +22,8 @@ public class StartProgram {
 		itemService.changePrice(2,50);
 		
 		System.out.println("Item price after discount");
-		System.out.println("Item 1 price: " +itemService.getItem(1).getSalePrice());
-		System.out.println("Item 2 price: " +itemService.getItem(2).getSalePrice());
+		System.out.println("Item 1 price: " +itemService.getItem(1).getPrice());
+		System.out.println("Item 2 price: " +itemService.getItem(2).getPrice());
 		
 		applicationContext.close();
 	}

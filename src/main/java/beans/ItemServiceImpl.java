@@ -16,8 +16,8 @@ public class ItemServiceImpl implements ItemService {
 		Item targetItem = itemDao.find(targetItemId);
 		System.out.println("testing");
 
-		sourceItem.setPrice(sourceItem.getPrice() + price);
-		targetItem.setPrice(targetItem.getPrice() + price);
+		sourceItem.setPrice(sourceItem.getDiscount() + price);
+		targetItem.setPrice(targetItem.getDiscount() + price);
 
 		itemDao.update(sourceItem);
 		itemDao.update(targetItem);
@@ -26,7 +26,7 @@ public class ItemServiceImpl implements ItemService {
 
 	public void changePrice(long itemId, double price) {
 		Item item = itemDao.find(itemId);
-		item.setPrice(item.getPrice() + price);
+		item.setPrice(item.getDiscount() + price);
 		itemDao.update(item);
 
 	}

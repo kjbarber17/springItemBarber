@@ -12,8 +12,8 @@ public class ItemDaoInMemoryImpl implements ItemDao {
 	private Map<Long,Item>itemsMap = new HashMap<Long, Item>();
 
 	{
-		Item item1 = new Item(1L, "table", 100, 25, 75);
-		Item item2 = new Item(2L, "couch", 300, 50, 250);
+		Item item1 = new Item(1L, "table", 100, 25);
+		Item item2 = new Item(2L, "couch", 300, 50);
 
 		itemsMap.put(item1.getId(), item1);
 		itemsMap.put(item2.getId(), item2);
